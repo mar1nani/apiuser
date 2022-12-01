@@ -90,3 +90,29 @@ spring-boot-sample
      .  +-- java
      .    |
      .    + com.api.springboot
+     
+## 3. POSTMAN collection
+
+In this link, there were 11 test runs of this User API using different methods and paths
+
+https://www.postman.com/grey-equinox-677568/workspace/user-api/example/24677749-a41c97c1-8ca2-4c51-b030-332c99dd5a3b
+
+This shared link in POSTMAN contains 11 requests and their 11 responses on how to:
+
++ List all users
++ Show user with id = 1
++ Show user with id = 2
++ Add new user with no validation error
++ Add new user with exception messages in Null values (country, birthday and username)
++ Add new user with exception handler message "the country must be french"
++ Add new user with exception handler message "The age must be greater than 18"
++ Add a User after all requirements are met
++ Update values of User When id = 6
++ List all users to see new users added
++ Delete User when id = 7
+
+
+
+
+
+
