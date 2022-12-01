@@ -41,7 +41,7 @@ class UserServiceTest {
 	@Test
 	void canAddUser() {
 		//given
-		User user = new User("Mar1Nani",LocalDate.of(1990, 8, 8), "oooo", "565656567",UserGender.MALE);
+		User user = new User("Mar1Nani",LocalDate.of(1997, 1, 1), "french", "0698448478",UserGender.MALE);
 		//when
 		underTest.save(user);
 		//then
