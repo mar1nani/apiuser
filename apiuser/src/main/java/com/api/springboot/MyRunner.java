@@ -11,6 +11,8 @@ import com.api.springboot.entity.User;
 import com.api.springboot.entity.UserGender;
 import com.api.springboot.repository.UserRepository;
 
+import lombok.extern.slf4j.Slf4j;
+
 @Component
 public class MyRunner implements CommandLineRunner {
 

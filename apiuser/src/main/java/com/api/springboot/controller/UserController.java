@@ -30,10 +30,12 @@ import com.api.springboot.entity.User;
 import com.api.springboot.service.UserService;
 
 import jakarta.validation.Valid;
+import lombok.AllArgsConstructor;
 
 @Validated
 @RestController
 @RequestMapping("/api")
+@AllArgsConstructor
 public class UserController {
 	@Autowired
 	private UserService userService;

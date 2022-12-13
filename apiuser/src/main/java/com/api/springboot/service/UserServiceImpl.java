@@ -13,7 +13,10 @@ import com.api.springboot.exception.UserNotFoundException;
 import com.api.springboot.repository.UserRepository;
 import com.api.springboot.service.UserValidator.ValidationResult;
 
+import lombok.AllArgsConstructor;
+
 @Service
+@AllArgsConstructor
 public class UserServiceImpl implements UserService{
 	
 	 @Autowired
