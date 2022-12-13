@@ -33,15 +33,11 @@ public class UserServiceImpl implements UserService{
 
 	@Override
 	public User save(User user) {
-        UserValidator.ValidationResult resultCountry = isValidCountry(user);
-        UserValidator.ValidationResult resultAge = isValidAge(user);
-        
-        if (resultCountry != UserValidator.ValidationResult.SUCCESS){
+        if (isValidCountry(user) != UserValidator.ValidationResult.SUCCESS){
         	throw new CountryFoundException();
-        }else if(resultAge != UserValidator.ValidationResult.SUCCESS) {
+        }else if(isValidAge(user) != UserValidator.ValidationResult.SUCCESS) {
         	throw new AgeFoundException();
         }
-        	
 		return userRepository.save(user);
 	}
 
@@ -58,16 +54,14 @@ public class UserServiceImpl implements UserService{
 
 	@Override
 	public ValidationResult isValidCountry(User user) {
-		UserValidator.ValidationResult result = UserValidator.userIsFrench()
-                .apply(user);
-         return result;
+         return UserValidator.userIsFrench()
+                 .apply(user);
 	}
 	
 	@Override
 	public ValidationResult isValidAge(User user) {
-		UserValidator.ValidationResult result = UserValidator.userIsOverAge()
-                .apply(user);
-         return result;
+         return UserValidator.userIsOverAge()
+                 .apply(user);
 	}
 
 }
